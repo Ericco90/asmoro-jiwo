@@ -189,10 +189,12 @@
     </div>
 </nav>
     <!-- 1. HERO SECTION (Tampilan Bersih & Elegan) -->
-   <header class="relative min-h-screen flex items-end justify-center px-4 pt-24 pb-16 overflow-hidden
-bg-no-repeat bg-center
-bg-[length:100%_auto] 
-md:bg-cover">
+   <header 
+class="relative min-h-screen flex items-end justify-center px-4 pt-24 pb-16 overflow-hidden bg-no-repeat bg-center md:bg-cover"
+style="
+background-image: url('image/bg2.jpg');
+background-size: contain;
+">
         <!-- Dark Overlay untuk memastikan teks tetap terbaca -->
 <!-- CTA POJOK KIRI BAWAH -->
 <!-- CTA POJOK KIRI BAWAH -->
@@ -1093,9 +1095,7 @@ md:bg-cover">
                 }
             });
         });
-    </script>
-    <script>
-window.addEventListener("scroll", function() {
+        window.addEventListener("scroll", function() {
   const nav = document.querySelector("nav");
   if (window.scrollY > 50) {
     nav.classList.add("bg-black");
@@ -1103,6 +1103,6 @@ window.addEventListener("scroll", function() {
     nav.classList.remove("bg-black");
   }
 });
-</script>
+    </script>
 </body>
 </html>
