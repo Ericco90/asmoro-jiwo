@@ -152,49 +152,49 @@
     <div class="fog-container"></div>
 
     <!-- NAVBAR -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-red-900/40">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+<!-- KANAN (CTA + HAMBURGER) -->
+<div class="flex items-center gap-4">
 
-        <!-- LOGO -->
-        <div class="text-white font-cinzel text-lg md:text-xl font-bold tracking-widest">
-            <span class="text-gold-gradient">Ki Asmoro</span>
-        </div>
+    <!-- CTA (desktop) -->
+    <a href="https://wa.me/6281234567890" 
+       class="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold text-white rounded-full 
+              bg-red-600 hover:bg-red-500 transition">
+        Konsultasi
+    </a>
 
-        <!-- MENU -->
-        <div class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-semibold">
+    <!-- HAMBURGER (mobile) -->
+    <button id="menu-btn" class="md:hidden text-white text-2xl z-[1000]">
+        ☰
+    </button>
 
-            <a href="#" class="hover:text-red-500 transition">Beranda</a>
-            <a href="#layanan" class="hover:text-red-500 transition">Layanan</a>
-            <a href="#produk" class="hover:text-red-500 transition">Produk</a>
-            <a href="#testimoni" class="hover:text-red-500 transition">Testimoni</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Kontak</a>
+</div>
 
-        </div>
+</div>
 
-        <!-- CTA -->
-        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" 
-           target="_blank"
-           class="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold text-white rounded-full 
-                  bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.6)] 
-                  hover:bg-red-500 hover:scale-105 transition">
+<!-- MENU MOBILE -->
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-black/95 z-[998] flex flex-col items-center justify-center gap-6 text-white text-lg">
 
-            Konsultasi
+    <a href="#layanan">Layanan</a>
+    <a href="#produk">Produk</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
 
-        </a>
-<!-- BUTTON HAMBURGER -->
-<button id="menu-btn" class="md:hidden text-white text-2xl">
-    ☰
-</button>
-    </div>
+    <a href="https://wa.me/6281234567890" 
+       class="bg-red-600 px-6 py-3 rounded-full font-bold">
+       Konsultasi Sekarang
+    </a>
+
+</div>
+
 </nav>
     <!-- 1. HERO SECTION (Tampilan Bersih & Elegan) -->
-   <header 
-class="relative min-h-screen flex items-end justify-center px-4 pt-24 pb-16 overflow-hidden bg-no-repeat bg-center md:bg-cover"
-style="
-background-image: url('image/bg2.jpg');
-background-size: contain;
-">
+ <header class="relative min-h-screen flex items-end justify-center px-4 pt-24 pb-16 overflow-hidden">
+
+    <div class="absolute inset-0">
+        <img src="image/bg2.jpg" 
+             class="w-full h-full object-cover md:object-cover object-contain">
+    </div>
         <!-- Dark Overlay untuk memastikan teks tetap terbaca -->
 <!-- CTA POJOK KIRI BAWAH -->
 <!-- CTA POJOK KIRI BAWAH -->
@@ -1102,6 +1102,12 @@ background-size: contain;
   } else {
     nav.classList.remove("bg-black");
   }
+});
+        const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
 });
     </script>
 </body>
