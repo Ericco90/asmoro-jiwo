@@ -152,72 +152,88 @@
     <div class="fog-container"></div>
 
     <!-- NAVBAR -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-red-900/40">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-red-900/40 transition-colors duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative z-50">
 
-        <!-- LOGO -->
-        <div class="text-white font-cinzel text-lg md:text-xl font-bold tracking-widest">
-            <span class="text-gold-gradient">Ki Asmoro</span>
+            <!-- LOGO -->
+            <div class="text-white font-cinzel text-lg md:text-xl font-bold tracking-widest relative z-50">
+                <span class="text-gold-gradient">Ki Asmoro</span>
+            </div>
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-semibold">
+                <a href="#" class="hover:text-red-500 transition">Beranda</a>
+                <a href="#layanan" class="hover:text-red-500 transition">Layanan</a>
+                <a href="#produk" class="hover:text-red-500 transition">Produk</a>
+                <a href="#testimoni" class="hover:text-red-500 transition">Testimoni</a>
+                <a href="#faq" class="hover:text-red-500 transition">FAQ</a>
+                <a href="#contact" class="hover:text-red-500 transition">Kontak</a>
+            </div>
+
+            <!-- DESKTOP CTA -->
+            <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" 
+               target="_blank"
+               class="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold text-white rounded-full bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.6)] hover:bg-red-500 hover:scale-105 transition">
+                Konsultasi
+            </a>
+
+            <!-- MOBILE MENU BUTTON (HAMBURGER) -->
+            <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none p-2 relative z-50">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- MENU -->
-        <div class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-semibold">
-
-            <a href="#" class="hover:text-red-500 transition">Beranda</a>
-            <a href="#layanan" class="hover:text-red-500 transition">Layanan</a>
-            <a href="#produk" class="hover:text-red-500 transition">Produk</a>
-            <a href="#testimoni" class="hover:text-red-500 transition">Testimoni</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Kontak</a>
-
+        <!-- MOBILE MENU OVERLAY (SLIDE/FADE) -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6 text-lg font-cinzel opacity-0 pointer-events-none transition-opacity duration-300 z-40 h-[100dvh]">
+            <a href="#" class="mobile-link text-white hover:text-red-500 transition">Beranda</a>
+            <a href="#layanan" class="mobile-link text-white hover:text-red-500 transition">Layanan</a>
+            <a href="#produk" class="mobile-link text-white hover:text-red-500 transition">Produk</a>
+            <a href="#testimoni" class="mobile-link text-white hover:text-red-500 transition">Testimoni</a>
+            <a href="#faq" class="mobile-link text-white hover:text-red-500 transition">FAQ</a>
+            <a href="#contact" class="mobile-link text-white hover:text-red-500 transition">Kontak</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" 
+               target="_blank"
+               class="mt-4 px-8 py-3 font-bold text-white rounded-full bg-red-600 shadow-glow-red hover:bg-red-500 transition">
+                Konsultasi Sekarang
+            </a>
         </div>
+    </nav>
 
-        <!-- CTA -->
-        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" 
-           target="_blank"
-           class="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold text-white rounded-full 
-                  bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.6)] 
-                  hover:bg-red-500 hover:scale-105 transition">
+    <!-- 1. HERO SECTION (Tampilan Bersih & Elegan - FIX MOBILE CROP) -->
+    <!-- Menghapus bg-fixed di HP (pakai md:bg-fixed) dan menggunakan h-[100dvh] agar pas full layar tanpa sisa ruang -->
+    <header class="relative w-full h-[100dvh] md:min-h-screen flex items-end justify-center text-center px-4 pb-16 overflow-hidden bg-[url('image/bg2.jpg')] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed">
+        
+        <!-- Dark Overlay Gradient biar teks bawah tetap terlihat kalau ada -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
-            Konsultasi
+        <!-- CTA POJOK KIRI BAWAH -->
+        <div class="absolute bottom-6 left-4 md:bottom-10 md:left-6 z-20 text-left">
+            <!-- label kecil -->
+            <p class="text-xs text-gray-300 mb-2 italic drop-shadow-md">
+                Konsultasi cepat
+            </p>
 
-        </a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Pesanggrahan%20Ki%20Asmoro%20Jiwo,%20saya%20ingin%20konsultasi..." 
+               target="_blank"
+               class="inline-flex items-center px-6 py-3 text-sm md:text-lg font-semibold text-white rounded-full 
+                      bg-red-600 
+                      shadow-[0_0_30px_rgba(220,38,38,0.6)] 
+                      hover:scale-105 hover:bg-red-500 hover:shadow-[0_0_45px_rgba(220,38,38,0.9)] 
+                      transition duration-300 backdrop-blur-sm">
+                Konsultasi Sekarang
 
-    </div>
-</nav>
-    <!-- 1. HERO SECTION (Tampilan Bersih & Elegan) -->
-    <header class="relative min-h-screen flex items-end justify-center justify-center text-center px-4 pt-24 pb-16 overflow-hidden" style="background-image: url('image/bg2.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <!-- Dark Overlay untuk memastikan teks tetap terbaca -->
-<!-- CTA POJOK KIRI BAWAH -->
-<!-- CTA POJOK KIRI BAWAH -->
-<div class="absolute bottom-6 left-4 md:bottom-10 md:left-6 z-20">
-    
-    <!-- label kecil -->
-    <p class="text-xs text-gray-300 mb-2 italic">
-        Konsultasi cepat
-    </p>
-
-    <a href="https://wa.me/6281234567890?text=Halo%20Pesanggrahan%20Ki%20Asmoro%20Jiwo,%20saya%20ingin%20konsultasi..." 
-       target="_blank"
-       class="inline-flex items-center px-7 py-3 text-base md:text-lg font-semibold text-white rounded-full 
-              bg-red-600 
-              shadow-[0_0_30px_rgba(220,38,38,0.6)] 
-              hover:scale-105 hover:bg-red-500 hover:shadow-[0_0_45px_rgba(220,38,38,0.9)] 
-              transition duration-300 backdrop-blur-sm">
-
-        Konsultasi Sekarang
-
-        <!-- ICON -->
-        <svg class="w-5 h-5 ml-2 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-        </svg>
-
-    </a>
-</div>
-</header>
+                <!-- ICON -->
+                <svg class="w-5 h-5 ml-2 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                </svg>
+            </a>
+        </div>
+    </header>
 
     <!-- 2. SECTION URGENCY -->
-    <section class="py-6 border-y border-red-900/50 bg-red-950/20 backdrop-blur-sm reveal">
+    <section class="py-6 border-y border-red-900/50 bg-red-950/20 backdrop-blur-sm reveal mt-[-1px]">
         <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center gap-2">
             <p class="text-red-500 font-bold text-xl md:text-2xl animate-pulse font-cinzel tracking-wider">
                 ⚠️ HANYA MENERIMA KLIEN TERBATAS SETIAP HARI
@@ -227,7 +243,7 @@
     </section>
 
     <!-- 3. SECTION LAYANAN & RITUAL UNGGULAN -->
-    <section id="layanan"class="py-24 px-4 bg-mystic-800/30 border-y border-red-900/30 relative">
+    <section id="layanan" class="py-24 px-4 bg-mystic-800/30 border-y border-red-900/30 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -338,7 +354,7 @@
     </section>
 
     <!-- 4. SECTION PRODUK BARANG JADI (BENDA BERTUAH) -->
-    <section id="produk"class="py-24 px-4 bg-[#0a0000] border-y border-red-900/50 relative">
+    <section id="produk" class="py-24 px-4 bg-[#0a0000] border-y border-red-900/50 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -735,7 +751,7 @@
     </section>
 
     <!-- 8. SECTION FAQ (Pertanyaan Umum) -->
-    <section id="faq"class="py-24 px-4 relative">
+    <section id="faq" class="py-24 px-4 relative">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-5xl text-center font-bold mb-12 text-white reveal font-cinzel">
                 Tanya <span class="text-red-600">Jawab</span>
@@ -847,7 +863,7 @@
     </section>
 
     <!-- 10. SECTION KONTAK & ALAMAT PADEPOKAN -->
-    <section id="contact"class="py-24 px-4 bg-mystic-800/80 border-t border-red-900/40 relative">
+    <section id="contact" class="py-24 px-4 bg-mystic-800/80 border-t border-red-900/40 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -971,23 +987,17 @@
 
     <!-- MODAL GAMBAR PRODUK & LAYANAN (Artikel Layout) -->
     <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 overflow-y-auto backdrop-blur-md opacity-0 transition-opacity duration-300 hide-scrollbar">
-        <!-- Area pembungkus agar klik diluar benar-benar berfungsi -->
         <div id="modalWrapper" class="relative w-full min-h-screen py-16 px-4 flex flex-col justify-center items-center">
             
-            <!-- Tombol Close (X) -->
             <button id="closeModal" class="fixed top-4 right-4 md:top-6 md:right-6 text-gray-400 hover:text-red-500 text-4xl md:text-5xl transition duration-300 z-50 bg-black/50 w-12 h-12 rounded-full flex items-center justify-center shadow-glow-red hover:shadow-glow-red-lg">&times;</button>
             
-            <!-- Box Card Artikel Utama -->
             <div class="bg-mystic-900/95 border border-red-900/50 rounded-2xl overflow-hidden shadow-glow-red-lg w-full max-w-4xl relative z-10 mt-auto mb-auto">
-                <!-- Gambar Modal -->
                 <img id="modalImage" src="" alt="Enlarged Product" class="w-full aspect-video md:h-[450px] object-cover border-b border-red-900/50">
                 
-                <!-- Konten / Teks -->
                 <div class="p-6 md:p-10">
                     <h3 id="modalTitle" class="text-3xl md:text-4xl font-bold text-gold-gradient font-cinzel mb-6 text-center border-b border-red-900/30 pb-4"></h3>
                     <div id="modalDesc" class="text-gray-300 text-sm md:text-base leading-relaxed text-justify space-y-4"></div>
                     
-                    <!-- Tombol Pesan dalam Modal -->
                     <div class="mt-10 flex justify-center">
                         <a id="modalWaBtn" href="#" target="_blank" class="btn-wa inline-flex items-center px-8 py-4 font-bold text-white rounded-full uppercase tracking-widest text-sm shadow-glow-red hover:shadow-glow-red-lg hover:-translate-y-1 transition-all text-center">
                             Pesan Layanan / Pusaka Ini
@@ -998,10 +1008,40 @@
         </div>
     </div>
 
-    <!-- JavaScript for Scroll Animations, FAQ, & Image Modal -->
+    <!-- JavaScript for Mobile Menu, Scroll Animations, FAQ, & Image Modal -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- 1. Scroll Animation Setup ---
+
+            // --- 1. MOBILE MENU TOGGLE ---
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Mengubah icon jadi X
+                    document.body.style.overflow = 'hidden'; // Kunci scroll layar saat menu kebuka
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Kembali ke Hamburger icon
+                    document.body.style.overflow = ''; // Lepas kunci scroll
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+
+            // Tutup menu otomatis jika link diklik
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if(isMenuOpen) toggleMenu();
+                });
+            });
+
+            // --- 2. Scroll Animation Setup ---
             const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -1018,7 +1058,7 @@
                 revealOnScroll.observe(reveal);
             });
 
-            // --- 2. Smooth FAQ Accordion Toggle ---
+            // --- 3. Smooth FAQ Accordion Toggle ---
             const details = document.querySelectorAll("details");
             details.forEach((targetDetail) => {
                 targetDetail.addEventListener("click", () => {
@@ -1030,7 +1070,7 @@
                 });
             });
 
-            // --- 3. Image Lightbox / Modal Setup ---
+            // --- 4. Image Lightbox / Modal Setup ---
             const modal = document.getElementById('imageModal');
             const modalWrapper = document.getElementById('modalWrapper');
             const modalImg = document.getElementById('modalImage');
@@ -1056,14 +1096,12 @@
                     
                     // Tampilkan modal dengan animasi fade-in
                     modal.classList.remove('hidden');
-                    // Reset scroll modal ke paling atas setiap kali dibuka
                     modal.scrollTop = 0;
                     
                     setTimeout(() => {
                         modal.classList.remove('opacity-0');
                     }, 10);
                     
-                    // Kunci scroll halaman belakang agar tidak double scroll
                     document.body.style.overflow = 'hidden';
                 });
             });
@@ -1073,7 +1111,8 @@
                 modal.classList.add('opacity-0');
                 setTimeout(() => {
                     modal.classList.add('hidden');
-                    document.body.style.overflow = ''; // kembalikan scroll
+                    // Jika mobile menu tidak sedang terbuka, kembalikan scroll
+                    if (!isMenuOpen) document.body.style.overflow = '';
                 }, 300);
             };
 
@@ -1089,14 +1128,17 @@
         });
     </script>
     <script>
-window.addEventListener("scroll", function() {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    nav.classList.add("bg-black");
-  } else {
-    nav.classList.remove("bg-black");
-  }
-});
-</script>
+        // Navbar scroll effect
+        window.addEventListener("scroll", function() {
+            const nav = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                nav.classList.add("bg-black");
+                nav.classList.remove("bg-black/70");
+            } else {
+                nav.classList.add("bg-black/70");
+                nav.classList.remove("bg-black");
+            }
+        });
+    </script>
 </body>
 </html>
