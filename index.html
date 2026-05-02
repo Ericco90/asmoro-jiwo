@@ -151,36 +151,70 @@
     <div class="bg-aura"></div>
     <div class="fog-container"></div>
 
-    <!-- 1. HERO SECTION (Tampilan Bersih & Elegan) -->
-    <header class="relative min-h-screen flex items-center justify-center text-center px-4 pt-24 pb-16 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <!-- Dark Overlay untuk memastikan teks tetap terbaca -->
-        <div class="absolute inset-0 bg-black/80 z-0"></div>
-        
-        <!-- Glowing center dot -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-900/30 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-red-900/40">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
-        <div class="relative z-10 max-w-4xl mx-auto reveal flex flex-col items-center">
-            <!-- TEKS HERO UTAMA -->
-            <h1 class="text-4xl md:text-7xl font-bold tracking-wider mb-4 text-white drop-shadow-lg leading-tight">
-                <span class="text-gold-gradient">Pesanggrahan</span><br>
-                <span class="font-cinzel text-white">Ki Asmoro Jiwo</span>
-            </h1>
-            
-            <h2 class="text-xl md:text-3xl text-gray-300 font-cinzel mb-6 tracking-wide mt-4">
-                Pusat Gemblengan Ilmu Hikmah, Susuk Premium, & Spiritual Nusantara
-            </h2>
-            
-            <p class="text-base md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed italic">
-                "Solusi supranatural tingkat tinggi untuk menuntaskan masalah asmara, karir, kerezekian, dan perlindungan diri secara tuntas."
-            </p>
-            
-            <a href="https://wa.me/6281234567890?text=Halo%20Pesanggrahan%20Ki%20Asmoro%20Jiwo,%20saya%20ingin%20konsultasi..." target="_blank" 
-               class="btn-wa inline-flex items-center justify-center px-10 py-4 text-lg md:text-xl font-bold text-white rounded-full uppercase tracking-widest w-full md:w-auto hover:-translate-y-1">
-                Konsultasi Sekarang
-                <svg class="w-6 h-6 ml-3 animate-pulse" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-            </a>
+        <!-- LOGO -->
+        <div class="text-white font-cinzel text-lg md:text-xl font-bold tracking-widest">
+            <span class="text-gold-gradient">Ki Asmoro</span>
         </div>
-    </header>
+
+        <!-- MENU -->
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-semibold">
+
+            <a href="#" class="hover:text-red-500 transition">Beranda</a>
+            <a href="#layanan" class="hover:text-red-500 transition">Layanan</a>
+            <a href="#produk" class="hover:text-red-500 transition">Produk</a>
+            <a href="#testimoni" class="hover:text-red-500 transition">Testimoni</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Kontak</a>
+
+        </div>
+
+        <!-- CTA -->
+        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi" 
+           target="_blank"
+           class="hidden md:inline-flex items-center px-5 py-2 text-sm font-bold text-white rounded-full 
+                  bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.6)] 
+                  hover:bg-red-500 hover:scale-105 transition">
+
+            Konsultasi
+
+        </a>
+
+    </div>
+</nav>
+    <!-- 1. HERO SECTION (Tampilan Bersih & Elegan) -->
+    <header class="relative min-h-screen flex items-end justify-center justify-center text-center px-4 pt-24 pb-16 overflow-hidden" style="background-image: url('image/bg2.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Dark Overlay untuk memastikan teks tetap terbaca -->
+<!-- CTA POJOK KIRI BAWAH -->
+<!-- CTA POJOK KIRI BAWAH -->
+<div class="absolute bottom-6 left-4 md:bottom-10 md:left-6 z-20">
+    
+    <!-- label kecil -->
+    <p class="text-xs text-gray-300 mb-2 italic">
+        Konsultasi cepat
+    </p>
+
+    <a href="https://wa.me/6281234567890?text=Halo%20Pesanggrahan%20Ki%20Asmoro%20Jiwo,%20saya%20ingin%20konsultasi..." 
+       target="_blank"
+       class="inline-flex items-center px-7 py-3 text-base md:text-lg font-semibold text-white rounded-full 
+              bg-red-600 
+              shadow-[0_0_30px_rgba(220,38,38,0.6)] 
+              hover:scale-105 hover:bg-red-500 hover:shadow-[0_0_45px_rgba(220,38,38,0.9)] 
+              transition duration-300 backdrop-blur-sm">
+
+        Konsultasi Sekarang
+
+        <!-- ICON -->
+        <svg class="w-5 h-5 ml-2 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+
+    </a>
+</div>
+</header>
 
     <!-- 2. SECTION URGENCY -->
     <section class="py-6 border-y border-red-900/50 bg-red-950/20 backdrop-blur-sm reveal">
@@ -193,7 +227,7 @@
     </section>
 
     <!-- 3. SECTION LAYANAN & RITUAL UNGGULAN -->
-    <section class="py-24 px-4 bg-mystic-800/30 border-y border-red-900/30 relative">
+    <section id="layanan"class="py-24 px-4 bg-mystic-800/30 border-y border-red-900/30 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -304,7 +338,7 @@
     </section>
 
     <!-- 4. SECTION PRODUK BARANG JADI (BENDA BERTUAH) -->
-    <section class="py-24 px-4 bg-[#0a0000] border-y border-red-900/50 relative">
+    <section id="produk"class="py-24 px-4 bg-[#0a0000] border-y border-red-900/50 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -586,7 +620,7 @@
     </section>
 
     <!-- 7. SECTION TESTIMONI (8 ASLI) -->
-    <section class="py-24 px-4 bg-mystic-800/50 border-b border-red-900/40 relative">
+    <section id="testimoni" class="py-24 px-4 bg-mystic-800/50 border-b border-red-900/40 relative">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl md:text-5xl text-center font-bold mb-16 text-white reveal font-cinzel">
                 Kesaksian <span class="text-gold-gradient">Klien Nyata</span>
@@ -701,7 +735,7 @@
     </section>
 
     <!-- 8. SECTION FAQ (Pertanyaan Umum) -->
-    <section class="py-24 px-4 relative">
+    <section id="faq"class="py-24 px-4 relative">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-5xl text-center font-bold mb-12 text-white reveal font-cinzel">
                 Tanya <span class="text-red-600">Jawab</span>
@@ -813,7 +847,7 @@
     </section>
 
     <!-- 10. SECTION KONTAK & ALAMAT PADEPOKAN -->
-    <section class="py-24 px-4 bg-mystic-800/80 border-t border-red-900/40 relative">
+    <section id="contact"class="py-24 px-4 bg-mystic-800/80 border-t border-red-900/40 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white font-cinzel">
@@ -1054,5 +1088,15 @@
             });
         });
     </script>
+    <script>
+window.addEventListener("scroll", function() {
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 50) {
+    nav.classList.add("bg-black");
+  } else {
+    nav.classList.remove("bg-black");
+  }
+});
+</script>
 </body>
 </html>
